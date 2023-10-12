@@ -1,0 +1,25 @@
+body{
+    background-color: bisque;
+}
+
+h2{
+    color: blueviolet;
+}
+
+img{
+  width: 300px;
+}
+
+p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:large;
+    color: aqua;
+}
+.sec_p{
+    color: blue;
+}
+
+.highlight{
+    color: brown;
+}
+    
