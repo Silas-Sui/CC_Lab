@@ -1,5 +1,7 @@
 # CC_Lab
  
+this is the live ver of it on GitHub: https://silas-sui.github.io/CC_Lab/
+
 this is the root of the very basic of my cclab folder
 
 if you see this on a url that looks like
