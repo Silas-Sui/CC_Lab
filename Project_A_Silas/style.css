@@ -1,3 +1,12 @@
+* {
+
+    text-align: center;
+    
+    }
 p{
-    color: rgb(72, 255, 72);
+    color: rgb(16, 12, 148);
+    margin: auto;
+    width: 640px; 
+    padding: 10px;
+    font-family: 'Lexend Deca', sans-serif; 
 }

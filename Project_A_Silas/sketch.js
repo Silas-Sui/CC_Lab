@@ -1,5 +1,3 @@
-console.log("this is linked?")
-
 let bacteria = []; // 存储细菌对象的数组
 let click = [];
 let click_Boolean = [];
@@ -20,9 +18,9 @@ function setup() {
 function draw() {
   // 绘制培养皿
   // background(255);
-  let r = map(sin(frameCount*0.1), -1, 1, 198, 100);
-  let b = map(cos(frameCount*0.1), -1, 1, 255, 100);
-  let g = map(sin(frameCount*0.1), -1, 1, 100, 253);
+  let r = map(sin(frameCount*0.1), -1, 1, 128, 90);
+  let b = map(cos(frameCount*0.1), -1, 1, 117, 80);
+  let g = map(sin(frameCount*0.1), -1, 1, 30, 60);
   fill(198, 253, 255);
   circle(width / 2, height / 2, dishDiameter);
   // console.log(click,click.length)
@@ -70,7 +68,7 @@ function draw() {
   for (let j = bacteria.length - 1; j >= 0; j--) {
     noStroke();
     fill(r, g, b, 30); // 细菌颜色
-    circle(bacteria[j].x, bacteria[j].y, 10);
+    circle(bacteria[j].x+random(1), bacteria[j].y+random(1), 10);
   }
 }
 
