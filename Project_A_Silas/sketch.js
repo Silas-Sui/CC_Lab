@@ -5,6 +5,11 @@ let Dia_bac = [];
 let r = 0;
 let g = 0;
 let b = 0;
+let tubeImage;
+
+function preload() {
+  tubeImage = loadImage('tube.jpg'); // 加载试管图像，确保有一张适当的试管图像文件
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -13,6 +18,7 @@ function setup() {
   } else {
     dishDiameter = width;
   }
+  imageMode(CORNER);
 }
 
 function draw() {
@@ -24,6 +30,11 @@ function draw() {
   fill(198, 253, 255);
   circle(width / 2, height / 2, dishDiameter);
   // console.log(click,click.length)
+  // 将试管图像绘制在鼠标位置
+  if (dist(mouseX, mouseY, width / 2, height / 2)<(width / 4)+80){
+    image(tubeImage, mouseX, mouseY, 100, 200);
+  }
+   // 调整大小以适应您的需求
   // 绘制细菌并更新位置
   for (let i = click.length - 1; i >= 0; i--) {
     fill(r, g, b); // 细菌颜色
@@ -44,7 +55,7 @@ function draw() {
 
       //判定是否出圈
       let d = dist(newX, newY, width / 2, height / 2);
-      if (d < (width / 4) + 40) {
+      if (d < (width / 4) + 80) {
         //新bac（普通点）
         bacteria.push(createVector(newX, newY));
         //新的click出现（生殖中的能生育细胞）
@@ -75,10 +86,13 @@ function draw() {
 function mouseClicked() {
   //初点
   let t = dist(mouseX, mouseY, width / 2, height / 2);
-  if (t < (width / 4)+40) {
+  if (t < (width / 4)+80) {
     click.push(createVector(mouseX, mouseY));
     Dia_bac.push(1);
     click_Boolean.push(1);
   }
 }
-// 1
+
+
+
+
