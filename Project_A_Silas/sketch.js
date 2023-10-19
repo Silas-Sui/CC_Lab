@@ -44,7 +44,7 @@ function draw() {
 
       //判定是否出圈
       let d = dist(newX, newY, width / 2, height / 2);
-      if (d < width / 2 - 10) {
+      if (d < (width / 4) + 40) {
         //新bac（普通点）
         bacteria.push(createVector(newX, newY));
         //新的click出现（生殖中的能生育细胞）
@@ -75,7 +75,7 @@ function draw() {
 function mouseClicked() {
   //初点
   let t = dist(mouseX, mouseY, width / 2, height / 2);
-  if (t < width / 4) {
+  if (t < (width / 4)+40) {
     click.push(createVector(mouseX, mouseY));
     Dia_bac.push(1);
     click_Boolean.push(1);
