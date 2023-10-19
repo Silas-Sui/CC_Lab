@@ -75,7 +75,7 @@ function draw() {
 function mouseClicked() {
   //初点
   let t = dist(mouseX, mouseY, width / 2, height / 2);
-  if (t < width / 2) {
+  if (t < width / 4) {
     click.push(createVector(mouseX, mouseY));
     Dia_bac.push(1);
     click_Boolean.push(1);
