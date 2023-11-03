@@ -1,0 +1,12 @@
+* {
+
+    text-align: center;
+    
+    }
+p{
+    color: rgb(12, 120, 149);
+    margin: auto;
+    width: 640px; 
+    padding: 10px;
+    font-family: 'Lexend Deca', sans-serif; 
+}
