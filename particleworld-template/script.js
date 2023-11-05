@@ -37,9 +37,10 @@ class Particle {
   }
   // methods (functions): particle's behaviors
   update() {
+    //位置更新
     this.x += this.speedX
     this.y += this.speedY
-    // (add) 
+    // (add) 加速度
     this.speedY += 0.2
   }
   display() {

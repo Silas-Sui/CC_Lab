@@ -16,20 +16,33 @@ function setup() {
 
 function draw() {
   background(backgroundHue, 10, 190);
-  for (let i = 0; i < numConfetti; i++) {
-    confettis.push(new Confetti(mouseX, mouseY))
+  // for (let i = 0; i < numConfetti; i++) {
+  //   confettis.push(new Confetti(mouseX, mouseY))
+  // }
+  if (mouseIsPressed == true) {
+    for (let i = 0; i < 3 * numConfetti; i++) {
+      confettis.push(new Confetti(mouseX, mouseY))
+    }
   }
-  
+
   for (let i = 0; i < confettis.length; i++) {
     confettis[i].update();
     confettis[i].checkOutOfCanvas();
     confettis[i].display();
-}
+  }
   console.log(confettis.length)
 
-  
+  for (let i = confettis.length - 1; i >= 0; i--) {
+
+    // for each confetti check if its on canvas
+    if (confettis[i].onCanvas == false) {
+      // delete this confetti
+      confettis.splice(i, 1);
+    }
 
   }
+
+}
 
 
 
@@ -38,7 +51,7 @@ class Confetti {
   constructor(startX, startY) {
     this.x = startX;
     this.y = startY;
-    this.size = random(2, 10);
+    this.size = random(12, 20);
     this.speedX = random(-2, 2);
     this.speedY = random(-1, -3);
     this.transparent = 1
@@ -49,11 +62,11 @@ class Confetti {
 
     // vertical
     if (this.y > height) {
-        this.onCanvas = false;
+      this.onCanvas = false;
     }
     // horizontal
-    if(this.x < 0 || this.x > width){
-        this.onCanvas = false;
+    if (this.x < 0 || this.x > width) {
+      this.onCanvas = false;
     }
   }
   update() {
@@ -64,22 +77,38 @@ class Confetti {
     // y slowly turns downward (positive)
     //维持上方
     if (this.para == 5) {
-
-      this.transparent -= 0.01
-
+      this.transparent -= 0.008
     }
     //向前
     if (this.para == 4) {
-      this.size *= random(1.01, 1.03)
-      this.transparent -= 0.01
+      if (this.size < random(30,50)) {
+        this.size *= random(1.01, 1.03)
+        this.transparent -= 0.008
+      } else {
+        this.transparent -= 0.008
+      }
+
+
     }
     if (this.para == 3) {
-      this.size *= random(0.96, 0.99)
-      this.transparent -= 0.01
+      if(this.size>2){
+        this.size *= random(0.96, 0.99)
+      }else{
+        this.transparent -= 0.008
+      }
+      
+     
     }
-    this.speedY = this.speedY + 0.1;
-    // x slowly turn towards 0
-    this.speedX = this.speedX * 0.99;
+
+    if (this.y > width - this.size / 2 ) {
+      this.speedY = -this.speedY
+    } else {
+      this.speedY = this.speedY + 0.19;
+      // x slowly turn towards 0
+      this.speedX = this.speedX * 1.001;
+    }
+
+
 
   }
   display() {
