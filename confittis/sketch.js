@@ -1,5 +1,5 @@
 let confettis = [];
-let numConfetti = 100;
+let numConfetti = 1;
 
 let backgroundHue = 0;
 
@@ -16,13 +16,21 @@ function setup() {
 
 function draw() {
   background(backgroundHue, 10, 190);
-
+  for (let i = 0; i < numConfetti; i++) {
+    confettis.push(new Confetti(mouseX, mouseY))
+  }
+  
   for (let i = 0; i < confettis.length; i++) {
     confettis[i].update();
+    confettis[i].checkOutOfCanvas();
     confettis[i].display();
-  }
-  console.log(confettis.length)
 }
+  console.log(confettis.length)
+
+  
+
+  }
+
 
 
 
@@ -36,6 +44,17 @@ class Confetti {
     this.transparent = 1
     this.hue = random(0, 360);
     this.para = floor(random(3, 6))
+  }
+  checkOutOfCanvas() {
+
+    // vertical
+    if (this.y > height) {
+        this.onCanvas = false;
+    }
+    // horizontal
+    if(this.x < 0 || this.x > width){
+        this.onCanvas = false;
+    }
   }
   update() {
     // apply speeds to position
@@ -73,8 +92,8 @@ class Confetti {
   }
 }
 
-function mousePressed() {
-  for (let i = 0; i < numConfetti; i++) {
-    confettis.push(new Confetti(mouseX, mouseY))
-  }
-}
+// function mousePressed() {
+//   for (let i = 0; i < numConfetti; i++) {
+//     confettis.push(new Confetti(mouseX, mouseY))
+//   }
+// }
