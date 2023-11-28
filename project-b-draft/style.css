@@ -39,6 +39,11 @@ p{
     border-color: #ecf0f1;
 }
 
+.main_box{
+    background-color: rgb(183, 255, 0);
+    position:relative
+}
+
 #canvasWrapper{
     /* background-color: green; */
     display: flex;
@@ -47,6 +52,17 @@ p{
     height: 70vh;
     background-color: #6887a7;
     /* outline: 2px green solid; */
+}
+#imageWrapper{
+    width: 100%;
+    display: flex;
+    position:absolute;
+    /* background-color: #253444; */
+    left: 3%;
+    right:3%;
+    bottom: 0%;
+
+    justify-content: space-between;
 }
 img {
     width: 150px; /* 设置图像的宽度 */
