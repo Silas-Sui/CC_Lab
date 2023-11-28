@@ -48,3 +48,6 @@ p{
     background-color: #6887a7;
     /* outline: 2px green solid; */
 }
+img {
+    width: 150px; /* 设置图像的宽度 */
+}
