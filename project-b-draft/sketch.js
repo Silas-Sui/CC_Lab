@@ -51,6 +51,7 @@ function draw() {
                 push()
                 if (d < 8) {
                     stroke(255, 0, 0); // 设置红色描边
+                    //在此处导入audio
                   } else {
                     stroke(0);
                   }
