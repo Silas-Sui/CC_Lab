@@ -79,7 +79,7 @@ function draw() {
             for (let i = 0; i < AnchorPoints.length; i += 2) {
                 let d = distToLine(mouseX, mouseY, AnchorPoints[i].x, AnchorPoints[i].y, AnchorPoints[i + 1].x, AnchorPoints[i + 1].y)
                 push()
-                if (d < 3) {
+                if (d < 7) {
                     stroke(255, 0, 0); // 设置红色描边
                     //在此处导入audio
                     let string_level = floor(dist(AnchorPoints[i].x, AnchorPoints[i].y, AnchorPoints[i + 1].x, AnchorPoints[i + 1].y))
