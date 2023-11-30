@@ -109,6 +109,24 @@ function draw() {
                     if(260 < string_level && 300> string_level) {
                         sound7.play()
                     }
+                    if(300 < string_level && 340> string_level) {
+                        sound8.play()
+                    }
+                    if(340 < string_level && 380> string_level) {
+                        sound9.play()
+                    }
+                    if(380 < string_level && 420> string_level) {
+                        sound10.play()
+                    }
+                    if(420 < string_level && 460> string_level) {
+                        sound11.play()
+                    }
+                    if(460 < string_level && 500> string_level) {
+                        sound12.play()
+                    }
+                    if(500 < string_level && 540> string_level) {
+                        sound13.play()
+                    }
                     // if(20 + 2 * m < string_level < 20 + 3 * m){
                     //     sound3.play()
                     // } 
