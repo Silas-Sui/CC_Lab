@@ -16,4 +16,4 @@ then you can append project/website/folder names to the url to get to the actual
 
 [Mini Project 6](Particles)
 
-[Project  B](Peoject_B)
+[Project  B](Project_B)
