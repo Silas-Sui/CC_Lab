@@ -18,7 +18,7 @@
 
 <body>
     <div id="menu">
-        <a href="#blues">Blues</a>
+        <a href="javascript:void(0);" onclick="playSound('sounds/blues.wav')">Blues</a>
         <a href="#jazz">Jazz</a>
         <a href="#funk">Funk</a>
     </div>
@@ -35,6 +35,12 @@
     
     <!-- the js file should be the last thing  -->
     <script src="sketch.js"></script>
+    <script>
+        function playSound(soundFile) {
+            let sound = loadSound(soundFile);
+            sound.play();
+        }
+    </script>
 </body>
 
 </html>

@@ -52,7 +52,11 @@ function draw() {
                 if (d < 8) {
                     stroke(255, 0, 0); // 设置红色描边
                     //在此处导入audio
-                  } else {
+                    let string_level = floor(dist(AnchorPoints[i].x, AnchorPoints[i].y, AnchorPoints[i + 1].x, AnchorPoints[i + 1].y))
+                    console.log(string_level)
+                    //如果string——level在（20，60）（60，100）。。。（420，460）一共10个档位
+                    //播放最高的音到最低的音
+                } else {
                     stroke(0);
                   }
                 line(AnchorPoints[i].x, AnchorPoints[i].y, AnchorPoints[i + 1].x, AnchorPoints[i + 1].y)

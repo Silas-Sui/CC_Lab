@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5 in html!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap" rel="stylesheet">
+    <!-- link the p5 lib -->
+    <script src="lib/p5.js"></script>
+    <!-- link the p5 sound -->
+    <script src="lib/p5.sound.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+        <a href="javascript:void(0);" onclick="playSound('sounds/blues.wav')">Blues</a>
+        <a href="javascript:void(0);" onclick="playSound('sounds/jazz.wav')">Jazz</a>
+        <a href="javascript:void(0);" onclick="playSound('sounds/funk.wav')">Funk</a>
+    </div>
+    <p>Guitar Hero!</p>
+
+    <div class="main_box">
+        <div id="canvasWrapper"></div>
+        <div id="imageWrapper">
+            <img src="html_images/md.png" alt="">
+            <img src="html_images/jc.png" alt="">
+        </div>
+    </div>
+
+    <!-- the js file should be the last thing  -->
+    <script src="sketch.js"></script>
+    <script>
+        let bluesSound;
+        let jazzSound;
+        let funkSound;
+
+
+        function preload() {
+            bluesSound = loadSound('sounds/blues.wav');
+            jazzSound = loadSound('sounds/jazz.wav');
+            funkSound = loadSound('sounds/jazz.wav');
+
+        }
+        function playSound(soundFile) {
+            if (soundFile === 'sounds/blues.wav') {
+                bluesSound.play();
+            }
+            if (soundFile === 'sounds/jazz.wav') {
+                jazzSound.play();
+            }
+            if (soundFile === 'sounds/funk.wav') {
+                funkSound.play();
+            }
+        }
+    </script>
+</body>
+
+</html>
