@@ -89,7 +89,6 @@ function draw() {
                     let m = 40
                     if (string_level < 60) {
                         sound1.play()
-                        console.log(1)
                     } 
                     if(60 < string_level && 100> string_level) {
                         sound2.play()
@@ -127,27 +126,6 @@ function draw() {
                     if(500 < string_level && 540> string_level) {
                         sound13.play()
                     }
-                    // if(20 + 2 * m < string_level < 20 + 3 * m){
-                    //     sound3.play()
-                    // } 
-                    // if(20 + 3 * m < string_level < 20 + 4 * m){
-                    //     sound4.play()
-                    // } 
-                    // if(20 + 4 * m < string_level < 20 + 5 * m){
-                    //     sound5.play()
-                    // } 
-                    // if(20 + 5 * m < string_level < 20 + 6 * m){
-                    //     sound6.play()
-                    // } 
-                    // if(20 + 6 * m < string_level < 20 + 7 * m){
-                    //     sound7.play()
-                    // } 
-                    // if(20 + 7 * m < string_level < 20 + 8 * m){
-                    //     sound8.play();
-                    // } 
-                    // if(20 + 8 * m < string_level < 20 + 9 * m){
-                    //     sound9.play();
-                    // }
 
 
                 } else {
