@@ -3,7 +3,7 @@ body {
     font-family: 'Vina Sans', sans-serif;
 }
 
-p{
+p {
     margin: 0;
     font-family: 'Vina Sans', sans-serif;
     background-color: #3c566f;
@@ -13,6 +13,11 @@ p{
     color: #ecf0f1;
 
 }
+
+html {
+    background-color: #3c566f;
+}
+
 #menu {
     background-color: #34495e;
     font-size: 25px;
@@ -21,7 +26,7 @@ p{
     color: #ecf0f1;
     display: flex;
     justify-content: space-around;
-    
+
 }
 
 #menu a {
@@ -39,12 +44,12 @@ p{
     border-color: #ecf0f1;
 }
 
-.main_box{
+.main_box {
     background-color: rgb(183, 255, 0);
-    position:relative
+    position: relative
 }
 
-#canvasWrapper{
+#canvasWrapper {
     /* background-color: green; */
     display: flex;
     justify-content: center;
@@ -53,17 +58,45 @@ p{
     background-color: #6887a7;
     /* outline: 2px green solid; */
 }
-#imageWrapper{
+
+#imageWrapper {
     width: 100%;
     display: flex;
-    position:absolute;
+    position: absolute;
     /* background-color: #253444; */
     left: 3%;
-    right:3%;
+    right: 3%;
     bottom: 0%;
 
     justify-content: space-between;
 }
+
 img {
-    width: 150px; /* 设置图像的宽度 */
+    width: 150px;
+    /* 设置图像的宽度 */
 }
+
+.button1 {
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    bottom: 70%;
+    font-size: 30px;
+    z-index: 10;
+}
+
+.button2 {
+    text-align: center;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 70%;
+    font-size: 30px;
+    z-index: 10;
+}
+
+.button1, .button2 {
+    z-index: 10; /* Adjust the value as needed */
+}
+
